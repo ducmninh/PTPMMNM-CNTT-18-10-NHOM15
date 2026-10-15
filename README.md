@@ -1,50 +1,35 @@
 # PTPMMNM-CNTT-18-10-NHOM15
 
 Bài tập lớn môn Phát triển phần mềm nguồn mở.
-- Nhóm: 15
-- Lớp: CNTT 18-10
+- **Nhóm:** 15
+- **Lớp:** CNTT 18-10
 
 ---
 
-## Lab01 — Bài thực hành dành cho sinh viên
+## Danh sách các bài thực hành (Labs)
 
-Nhánh này chỉ chứa một bài lab. Dùng Ubuntu/WSL, PHP từ 8.1 và Git.
+- [x] **[Lab 01](./lab1)**: Vận hành dự án trên Linux và viết Shell Script
+- [ ] **Lab 02**
+- [ ] **Lab 03**
+- [ ] **Lab 04**
+- [ ] **Lab 05**
 
-Không cần PostgreSQL hoặc Composer.
+---
 
-## Chuẩn bị trên Ubuntu/WSL
-
-```bash
-sudo apt update
-sudo apt install php-cli git unzip
-php -v
-git --version
-```
-
-PHP cần từ 8.1 trở lên. Các lệnh bên dưới chạy trong Ubuntu/WSL.
-
-## Chạy bài
+### Hướng dẫn chạy Lab 01
 
 ```bash
-cd Ma_nguon
+cd lab1/Ma_nguon
+
+# Kiểm tra môi trường
 bash lab.sh check
+
+# Khởi chạy ứng dụng mẫu
 bash lab.sh run
-```
 
-Mở http://127.0.0.1:8101. Giữ terminal mở; Ctrl+C để dừng.
-
-## Kiểm tra
-
-Mở terminal thứ hai tại Ma_nguon, hoặc dừng máy chủ trước:
-
-```bash
+# Kiểm tra bài mẫu
 bash lab.sh test
+
+# Kiểm tra bài tập mở rộng (tự làm)
 bash lab.sh extend
 ```
-
-- `check`: kiểm tra môi trường
-- `test`: kiểm tra bài mẫu (`CHECK_ENV=PASS`)
-- `extend`: kiểm tra bài tập mở rộng (`SHELL_CASES=4 FAILED=0`)
-
-[Hướng dẫn đầy đủ](HUONG_DAN.md) · [Hướng dẫn mã nguồn](Ma_nguon/README.md)
-
