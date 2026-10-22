@@ -24,8 +24,8 @@ Dự án bài tập thực hành môn **Phát triển phần mềm mã nguồn m
 | **Lab 01** | Vận hành dự án trên Linux & Viết Shell Script quét mã nguồn | ✅ **Đã hoàn thành** | `CHECK_ENV=PASS`<br>`SHELL_CASES=4 FAILED=0` | [Xem Lab 01](./lab1) |
 | **Lab 02** | Quy tắc kiểm tra sức chứa & Ba trạng thái đăng ký (`decide`) | ✅ **Đã hoàn thành** | `TESTS=5 FAILED=0`<br>`TESTS=8 FAILED=0` | [Xem Lab 02](./lab2) |
 | **Lab 03** | Xử lý Form GET/POST, Lọc sự kiện kết hợp (`AND`) & Xem trước | ✅ **Đã hoàn thành** | `TESTS=7 FAILED=0`<br>`TESTS=8 FAILED=0` | [Xem Lab 03](./lab3) |
-| **Lab 04** | *(Cập nhật theo tiến độ học phần)* | ⏳ *Chưa bắt đầu* | — | — |
-| **Lab 05** | *(Cập nhật theo tiến độ học phần)* | ⏳ *Chưa bắt đầu* | — | — |
+| **Lab 04** | Quản lý bản nháp bằng Session và Cookie | 🔄 **Đang thực hiện** | — | [Xem Lab 04](./lab4) |
+| **Lab 05** | Hệ thống quản lý thông tin sinh viên và điểm (PostgreSQL / MySQL) | 🔄 **Đang thực hiện** | — | [Xem Lab 05](./lab5) |
 
 ---
 
