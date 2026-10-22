@@ -24,8 +24,8 @@ Dự án bài tập thực hành môn **Phát triển phần mềm mã nguồn m
 | **Lab 01** | Vận hành dự án trên Linux & Viết Shell Script quét mã nguồn | ✅ **Đã hoàn thành** | `CHECK_ENV=PASS`<br>`SHELL_CASES=4 FAILED=0` | [Xem Lab 01](./lab1) |
 | **Lab 02** | Quy tắc kiểm tra sức chứa & Ba trạng thái đăng ký (`decide`) | ✅ **Đã hoàn thành** | `TESTS=5 FAILED=0`<br>`TESTS=8 FAILED=0` | [Xem Lab 02](./lab2) |
 | **Lab 03** | Xử lý Form GET/POST, Lọc sự kiện kết hợp (`AND`) & Xem trước | ✅ **Đã hoàn thành** | `TESTS=7 FAILED=0`<br>`TESTS=8 FAILED=0` | [Xem Lab 03](./lab3) |
-| **Lab 04** | Quản lý bản nháp bằng Session và Cookie | ✅ **Đã hoàn thành** | `TESTS=6 FAILED=0`<br>`TESTS=7 FAILED=0` | [Xem Lab 04](./Lap4) |
-| **Lab 05** | Lưu, truy vấn và thống kê đăng ký với PostgreSQL | ✅ **Đã hoàn thành** | `TESTS=6 FAILED=0`<br>`TESTS=7 FAILED=0`<br>`TESTS=4 FAILED=0` | [Xem Lab 05](./lap5) |
+| **Lab 04** | Quản lý bản nháp bằng Session và Cookie | ✅ **Đã hoàn thành** | `TESTS=6 FAILED=0`<br>`TESTS=7 FAILED=0` | [Xem Lab 04](./lab4) |
+| **Lab 05** | Lưu, truy vấn và thống kê đăng ký với PostgreSQL | ✅ **Đã hoàn thành** | `TESTS=6 FAILED=0`<br>`TESTS=7 FAILED=0`<br>`TESTS=4 FAILED=0` | [Xem Lab 05](./lab5) |
 
 ---
 
@@ -77,13 +77,13 @@ Dự án bài tập thực hành môn **Phát triển phần mềm mã nguồn m
 ### 📌 Lab 04 — Quản lý bản nháp bằng Session và Cookie
 - **Mục tiêu:** Phân biệt dữ liệu Session ở phía máy chủ và tùy chọn Cookie phía trình duyệt. Xây luồng nhập, xác nhận, sửa, hủy và hoàn tất mô phỏng. Kiểm tra nháp vắng mặt, hết hạn và hai phiên độc lập.
 - **Tệp hoàn thiện:**
-  - [`Lap4/Ma_nguon/src/Draft.php`](./Lap4/Ma_nguon/src/Draft.php): Hàm `saveDraft`, `draftExpired`, `cancelDraft` quản lý bản nháp trong Session.
-  - [`Lap4/Ma_nguon/src/DraftGuard.php`](./Lap4/Ma_nguon/src/DraftGuard.php): Hoàn thiện hàm `canComplete` kiểm tra bản nháp tồn tại, đúng event, TTL dương, thời điểm tạo hợp lệ và tuổi bản nháp chưa hết hạn.
-  - [`Lap4/Ma_nguon/public/register.php`](./Lap4/Ma_nguon/public/register.php): Nhận form đăng ký, lưu bản nháp vào Session, chuyển trang xác nhận.
-  - [`Lap4/Ma_nguon/public/confirm.php`](./Lap4/Ma_nguon/public/confirm.php): Đọc nháp từ Session để xem lại, cho phép sửa hoặc hủy.
-  - [`Lap4/Ma_nguon/public/complete.php`](./Lap4/Ma_nguon/public/complete.php): Kết thúc mô phỏng, xóa nháp rồi hiển thị SIMULATED_OK.
-  - [`Lap4/Ma_nguon/public/cancel.php`](./Lap4/Ma_nguon/public/cancel.php): Xử lý hủy bản nháp bằng POST.
-  - [`Lap4/Ma_nguon/public/preferences.php`](./Lap4/Ma_nguon/public/preferences.php): Lưu tùy chọn hiển thị vào Cookie (`compact`/`full`).
+  - [`lab4/Ma_nguon/src/Draft.php`](./lab4/Ma_nguon/src/Draft.php): Hàm `saveDraft`, `draftExpired`, `cancelDraft` quản lý bản nháp trong Session.
+  - [`lab4/Ma_nguon/src/DraftGuard.php`](./lab4/Ma_nguon/src/DraftGuard.php): Hoàn thiện hàm `canComplete` kiểm tra bản nháp tồn tại, đúng event, TTL dương, thời điểm tạo hợp lệ và tuổi bản nháp chưa hết hạn.
+  - [`lab4/Ma_nguon/public/register.php`](./lab4/Ma_nguon/public/register.php): Nhận form đăng ký, lưu bản nháp vào Session, chuyển trang xác nhận.
+  - [`lab4/Ma_nguon/public/confirm.php`](./lab4/Ma_nguon/public/confirm.php): Đọc nháp từ Session để xem lại, cho phép sửa hoặc hủy.
+  - [`lab4/Ma_nguon/public/complete.php`](./lab4/Ma_nguon/public/complete.php): Kết thúc mô phỏng, xóa nháp rồi hiển thị SIMULATED_OK.
+  - [`lab4/Ma_nguon/public/cancel.php`](./lab4/Ma_nguon/public/cancel.php): Xử lý hủy bản nháp bằng POST.
+  - [`lab4/Ma_nguon/public/preferences.php`](./lab4/Ma_nguon/public/preferences.php): Lưu tùy chọn hiển thị vào Cookie (`compact`/`full`).
 - **Nội dung thực hiện:**
   - **Bài mẫu:** Đọc và thực hiện lại luồng nhập → lưu nháp → xác nhận → sửa/hủy. Session lưu `draft` gồm `data` và `created_at`. Cookie `view` chỉ chứa `compact` hoặc `full`.
   - **Bài mở rộng:** Viết hàm `canComplete(array $session, int $requestedEventId, int $now, int $ttl): bool` kiểm tra:
@@ -101,11 +101,11 @@ Dự án bài tập thực hành môn **Phát triển phần mềm mã nguồn m
 ### 📌 Lab 05 — Lưu, truy vấn và thống kê đăng ký với PostgreSQL
 - **Mục tiêu:** Kết nối PHP với PostgreSQL, lưu/đọc đăng ký bằng truy vấn tham số hóa, chống trùng theo cặp sự kiện–email, và thống kê số đăng ký kể cả sự kiện chưa có người tham dự.
 - **Tệp hoàn thiện:**
-  - [`lap5/Ma_nguon/src/RegistrationRepository.php`](./lap5/Ma_nguon/src/RegistrationRepository.php): Phương thức `save` lưu đăng ký trả `CREATED`/`DUPLICATE`; `listForEvent` đọc danh sách theo sự kiện.
-  - [`lap5/Ma_nguon/src/RegistrationStats.php`](./lap5/Ma_nguon/src/RegistrationStats.php): Hàm `registrationStats` dùng `LEFT JOIN` để đếm số đăng ký theo sự kiện — sự kiện chưa có người trả `total=0`, ID không tồn tại trả mảng rỗng.
-  - [`lap5/Ma_nguon/src/Database.php`](./lap5/Ma_nguon/src/Database.php): Mở kết nối và thực thi SQL có tham số qua pgsql.
-  - [`lap5/Ma_nguon/demo-db.php`](./lap5/Ma_nguon/demo-db.php): Kiểm tra CSDL qua dòng lệnh trước khi nối giao diện.
-  - [`lap5/Ma_nguon/public/complete.php`](./lap5/Ma_nguon/public/complete.php): Thay hoàn tất mô phỏng bằng lưu CSDL thực; chỉ xóa nháp sau khi lưu thành công.
+  - [`lab5/Ma_nguon/src/RegistrationRepository.php`](./lab5/Ma_nguon/src/RegistrationRepository.php): Phương thức `save` lưu đăng ký trả `CREATED`/`DUPLICATE`; `listForEvent` đọc danh sách theo sự kiện.
+  - [`lab5/Ma_nguon/src/RegistrationStats.php`](./lab5/Ma_nguon/src/RegistrationStats.php): Hàm `registrationStats` dùng `LEFT JOIN` để đếm số đăng ký theo sự kiện — sự kiện chưa có người trả `total=0`, ID không tồn tại trả mảng rỗng.
+  - [`lab5/Ma_nguon/src/Database.php`](./lab5/Ma_nguon/src/Database.php): Mở kết nối và thực thi SQL có tham số qua pgsql.
+  - [`lab5/Ma_nguon/demo-db.php`](./lab5/Ma_nguon/demo-db.php): Kiểm tra CSDL qua dòng lệnh trước khi nối giao diện.
+  - [`lab5/Ma_nguon/public/complete.php`](./lab5/Ma_nguon/public/complete.php): Thay hoàn tất mô phỏng bằng lưu CSDL thực; chỉ xóa nháp sau khi lưu thành công.
 - **Nội dung thực hiện:**
   - **Bài mẫu:** Tạo schema PostgreSQL (bảng `events`, `registrations` với ràng buộc `UNIQUE(event_id, email)`), lưu đăng ký bằng `INSERT ... ON CONFLICT DO NOTHING RETURNING id`, đọc danh sách và kiểm tra CREATED/DUPLICATE.
   - **Bài mở rộng:** Viết hàm `registrationStats(PgSql\Connection $connection, int $eventId): array` dùng `LEFT JOIN` giữa `events` và `registrations`, đếm `COUNT(r.id)` để phân biệt sự kiện chưa có đăng ký (total=0) và ID không tồn tại (trả `[]`).
@@ -147,7 +147,7 @@ bash lab.sh extend   # Kiểm tra bộ lọc kết hợp mở rộng (TESTS=8 FA
 
 ### 🔹 Lab 04 — Session & Cookie
 ```bash
-cd Lap4/Ma_nguon
+cd lab4/Ma_nguon
 bash lab.sh check    # Kiểm tra môi trường PHP & Git
 bash lab.sh run      # Khởi chạy ứng dụng web (http://127.0.0.1:8104)
 bash lab.sh test     # Kiểm tra bài mẫu (TESTS=6 FAILED=0)
@@ -156,7 +156,7 @@ bash lab.sh extend   # Kiểm tra bài mở rộng (TESTS=7 FAILED=0)
 
 ### 🔹 Lab 05 — PostgreSQL: Lưu, truy vấn và thống kê đăng ký
 ```bash
-cd lap5/Ma_nguon
+cd lab5/Ma_nguon
 bash lab.sh db-config  # Cấu hình kết nối PostgreSQL (chỉ lần đầu)
 bash lab.sh check      # Kiểm tra môi trường PHP, pgsql, psql
 bash lab.sh sql        # Mở psql để chạy schema và kiểm tra
