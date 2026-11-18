@@ -8,14 +8,7 @@
   </p>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat-square&logo=php&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Chart.js-4.4-FF6384?style=flat-square&logo=chartdotjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/XAMPP-Apache-FB7A24?style=flat-square&logo=apache&logoColor=white"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square"/>
-</p>
+
 
 ---
 
