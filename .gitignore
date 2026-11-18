@@ -1,0 +1,40 @@
+# ============================================
+# .gitignore - Đề tài 17: Web Analytics Tool
+# ============================================
+
+# Bỏ qua file Word báo cáo nặng (upload riêng)
+*.docx
+
+# Bỏ qua dữ liệu runtime & database tạm
+data/
+*.sqlite
+*.sqlite3
+
+# Bỏ qua thông tin cấu hình nhạy cảm (nếu có)
+config/db_local.php
+.env
+*.env
+
+# Bỏ qua cache của editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Bỏ qua thư mục upload do người dùng tạo ra
+uploads/
+logs/
+
+# Bỏ qua file hệ thống macOS/Windows
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Bỏ qua các file Python build tạm
+__pycache__/
+*.pyc
+*.pyo
+
+# Bỏ qua Node modules nếu dùng
+node_modules/
